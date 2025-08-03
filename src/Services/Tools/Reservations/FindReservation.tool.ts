@@ -1,8 +1,8 @@
 import { Injectable, Logger } from '@nestjs/common';
+import { FindReservationService } from '@services/Reservations/FindReservation.service';
+import { ReservationNotFoundError } from '@Types/Errors/ReservationNotFoundError';
 import { tool } from 'ai';
-import { ReservationNotFoundError } from 'src/Types/Errors/ReservationNotFoundError';
 import z from 'zod';
-import { FindReservationService } from '../../Reservations/FindReservation.service';
 
 interface FindReservationData {
   phoneNumber: string;

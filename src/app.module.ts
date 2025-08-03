@@ -1,25 +1,25 @@
+import { Guidelines } from '@models/Guidelines';
+import { Message } from '@models/Message';
+import { Reservation } from '@models/Reservation';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { AgentService } from '@services/Agent/Agent.service';
+import { ChatService } from '@services/Chat/Chat.service';
+import { EmbeddingsGeneratorService } from '@services/Embeddings/EmbeddingsGenerator.service';
+import { EmbeddingsSearchService } from '@services/Embeddings/EmbeddingsSearch.service';
+import { GuidelinesCreatorService } from '@services/Guidelines/GuidelinesCreator.service';
+import { CancelReservationService } from '@services/Reservations/CancelReservation.service';
+import { CreateReservationService } from '@services/Reservations/CreateReservation.service';
+import { FindReservationService } from '@services/Reservations/FindReservation.service';
+import { UpdateReservationService } from '@services/Reservations/UpdateReservation.service';
+import { TelegramAgent } from '@services/Telegram/TelegramAgent';
+import { GetAllergensInfoTool } from '@services/Tools/GetAllergensInfo.tool';
+import { CancelReservationTool } from '@services/Tools/Reservations/CancelReservation.tool';
+import { CreateReservationTool } from '@services/Tools/Reservations/CreateReservation.tool';
+import { FindReservationTool } from '@services/Tools/Reservations/FindReservation.tool';
+import { UpdateReservationTool } from '@services/Tools/Reservations/UpdateReservation.tool';
 import { AppController } from './app.controller';
-import { Guidelines } from './Models/Guidelines';
-import { Message } from './Models/Message';
-import { Reservation } from './Models/Reservation';
-import { AgentService } from './Services/Agent/Agent.service';
-import { ChatService } from './Services/Chat/Chat.service';
-import { EmbeddingsGeneratorService } from './Services/Embeddings/EmbeddingsGenerator.service';
-import { EmbeddingsSearchService } from './Services/Embeddings/EmbeddingsSearch.service';
-import { GuidelinesCreatorService } from './Services/Guidelines/GuidelinesCreator.service';
-import { CancelReservationService } from './Services/Reservations/CancelReservation.service';
-import { CreateReservationService } from './Services/Reservations/CreateReservation.service';
-import { FindReservationService } from './Services/Reservations/FindReservation.service';
-import { UpdateReservationService } from './Services/Reservations/UpdateReservation.service';
-import { TelegramAgent } from './Services/Telegram/TelegramAgent';
-import { GetAllergensInfoTool } from './Services/Tools/GetAllergensInfo.tool';
-import { CancelReservationTool } from './Services/Tools/Reservations/CancelReservation.tool';
-import { CreateReservationTool } from './Services/Tools/Reservations/CreateReservation.tool';
-import { FindReservationTool } from './Services/Tools/Reservations/FindReservation.tool';
-import { UpdateReservationTool } from './Services/Tools/Reservations/UpdateReservation.tool';
 
 @Module({
   imports: [

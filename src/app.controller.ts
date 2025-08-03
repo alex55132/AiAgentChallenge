@@ -1,8 +1,8 @@
+import { ChatInputDto, ChatOutputDto } from '@Dto/Chat.dto';
+import { GenerateAndSaveEmbeddingDto } from '@Dto/GenerateAndSaveEmbedding.dto';
 import { Body, Controller, Post, Put } from '@nestjs/common';
-import { ChatInputDto, ChatOutputDto } from './Dto/Chat.dto';
-import { GenerateAndSaveEmbeddingDto } from './Dto/GenerateAndSaveEmbedding.dto';
-import { ChatService } from './Services/Chat/Chat.service';
-import { GuidelinesCreatorService } from './Services/Guidelines/GuidelinesCreator.service';
+import { ChatService } from '@services/Chat/Chat.service';
+import { GuidelinesCreatorService } from '@services/Guidelines/GuidelinesCreator.service';
 
 @Controller()
 export class AppController {

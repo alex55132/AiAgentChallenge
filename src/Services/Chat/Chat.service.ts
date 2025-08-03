@@ -1,8 +1,8 @@
+import { Message, MessageRole } from '@models/Message';
 import { Injectable, Logger } from '@nestjs/common';
-import { Message, MessageRole } from 'src/Models/Message';
-import { AgentService } from 'src/Services/Agent/Agent.service';
-import { EmbeddingsGeneratorService } from '../Embeddings/EmbeddingsGenerator.service';
-import { EmbeddingsSearchService } from '../Embeddings/EmbeddingsSearch.service';
+import { AgentService } from '@services/Agent/Agent.service';
+import { EmbeddingsGeneratorService } from '@services/Embeddings/EmbeddingsGenerator.service';
+import { EmbeddingsSearchService } from '@services/Embeddings/EmbeddingsSearch.service';
 
 export interface FormattedMessage {
   role: MessageRole;

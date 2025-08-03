@@ -1,6 +1,6 @@
+import { Guidelines } from '@models/Guidelines';
 import { Injectable } from '@nestjs/common';
-import { Guidelines } from 'src/Models/Guidelines';
-import { EmbeddingsGeneratorService } from '../Embeddings/EmbeddingsGenerator.service';
+import { EmbeddingsGeneratorService } from '@services/Embeddings/EmbeddingsGenerator.service';
 
 @Injectable()
 export class GuidelinesCreatorService {

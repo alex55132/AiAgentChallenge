@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
+import { CancelReservationService } from '@services/Reservations/CancelReservation.service';
 import { tool } from 'ai';
 import z from 'zod';
-import { CancelReservationService } from '../../Reservations/CancelReservation.service';
 
 @Injectable()
 export class CancelReservationTool {

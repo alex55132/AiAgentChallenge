@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { ChatService } from '@services/Chat/Chat.service';
 import { Bot } from 'grammy';
-import { ChatService } from 'src/Services/Chat/Chat.service';
 
 @Injectable()
 export class TelegramAgent {

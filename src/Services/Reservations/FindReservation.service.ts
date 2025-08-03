@@ -1,6 +1,6 @@
+import { Reservation } from '@models/Reservation';
 import { Injectable } from '@nestjs/common';
-import { Reservation } from 'src/Models/Reservation';
-import { ReservationNotFoundError } from 'src/Types/Errors/ReservationNotFoundError';
+import { ReservationNotFoundError } from '@Types/Errors/ReservationNotFoundError';
 
 @Injectable()
 export class FindReservationService {

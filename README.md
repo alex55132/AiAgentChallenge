@@ -138,6 +138,8 @@ In order to deploy this project locally we will need an `.env` file, you can jus
 
 It is mandatory to provide a `OPENAI_API_KEY`, but not a `TELEGRAM_KEY`. If you do not provide a telegram key the integration will be disabled.
 
+Instructions for getting a telegram key are available [here](https://core.telegram.org/bots/tutorial#obtain-your-bot-token)
+
 ### Running the project
 
 If it is the first time running the project you will need to run the migrations and the seed file.

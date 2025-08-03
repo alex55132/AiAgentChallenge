@@ -16,6 +16,20 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@services/*": [
+        "src/Services/*"
+      ],
+      "@models/*": [
+        "src/Models/*"
+      ],
+      "@Dto/*": [
+        "src/Dto/*"
+      ],
+      "@Types/*": [
+        "src/Types/*"
+      ]
+    }
   }
 }

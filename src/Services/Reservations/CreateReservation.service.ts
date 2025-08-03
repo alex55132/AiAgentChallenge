@@ -1,7 +1,8 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Reservation } from 'src/Models/Reservation';
-import { ReservationAlreadyExistsError } from 'src/Types/Errors/ReservationAlreadyExistsError';
-import { ReservationNotFoundError } from 'src/Types/Errors/ReservationNotFoundError';
+
+import { Reservation } from '@models/Reservation';
+import { ReservationAlreadyExistsError } from '@Types/Errors/ReservationAlreadyExistsError';
+import { ReservationNotFoundError } from '@Types/Errors/ReservationNotFoundError';
 import { FindReservationService } from './FindReservation.service';
 
 interface ReservationData {
