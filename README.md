@@ -4,6 +4,21 @@ The main goal is to build an AI agent that is able to dynamically adapt its prom
 
 These behavioural guidelines are retrieved from a database and change based on the input of the user.
 
+## Table of contents
+
+1. [The use case](#the-use-case)
+2. [Architecture](#architecture)
+   1. [The API](#the-api)
+   2. [The Database](#the-database)
+   3. [Docker](#docker)
+3. [How it works](#how-it-works)
+   1. [/guideline](#guideline)
+   2. [/chat](#chat)
+4. [How to deploy](#how-to-deploy)
+   1. [Requirements](#requirements)
+   2. [Env variables](#env-variables)
+   3. [Running the project](#running-the-project)
+
 ## The use case
 
 For the project I've decided to go with a **restaurant reservations system**.
