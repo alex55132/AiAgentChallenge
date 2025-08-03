@@ -160,6 +160,7 @@ Instructions for getting a telegram key are available [here](https://core.telegr
 If it is the first time running the project you will need to run the migrations and the seed file.
 
 1. `docker compose up` -> Start up the database
-2. `yarn migrate` -> Create the required tables for startup. It will only create the `Guideline` table, the rest will get created by sequelize when the API endpoints are executed
-3. `yarn seed:all` -> It will execute the seeding script. I've added myself some guidelines but feel free to modify or delete them to achieve multiple behaviours from the agent!
-4. `yarn start:prod` or `yarn start:dev` -> This will launch the API, there are no differences in environments at the current state of the project other than the watch mode in `development` mode
+2. `yarn install`
+3. `yarn migrate` -> Create the required tables for startup. It will only create the `Guideline` table, the rest will get created by sequelize when the API endpoints are executed
+4. `yarn seed:all` -> It will execute the seeding script. I've added myself some guidelines but feel free to modify or delete them to achieve multiple behaviours from the agent!
+5. `yarn start:prod` or `yarn start:dev` -> This will launch the API, there are no differences in environments at the current state of the project other than the watch mode in `development` mode
