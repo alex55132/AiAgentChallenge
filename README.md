@@ -44,7 +44,7 @@ The templates used for the sequelize tools was found in [this article](https://d
 
 As other relevant tools used in the project are [Vercel AI SDK](https://v5.ai-sdk.dev/docs/introduction) for AI interaction, [Sequelize](https://sequelize.org/) as an ORM and [grammY](https://grammy.dev/) for Telegram integration
 
-> **IMPORTANT**: At this project you will find a couple of hardcoded credentials (In [docker compose](docker-compose.yml), in the sequelize config module and in the [config.json](db\config.json) file). These credentials are for the local database and they are there to make easier testing the MVP.
+> **IMPORTANT**: At this project you will find a couple of hardcoded credentials (In [docker compose](docker-compose.yml), in the sequelize config module and in the [config.json](db/config.json) file). These credentials are for the local database and they are there to make easier testing the MVP.
 >
 > In a full working project all the credentials should go in the **enviroment variables**
 
@@ -84,7 +84,7 @@ It then proceeds to call OpenAI API to generate the **embeddings** for the given
 >
 > You can learn more about embeddings in [OpenAI docs](https://platform.openai.com/docs/guides/embeddings)
 
-After generating the embeddings using model `text-embedding-3-small`, it then proceeds to save it in the database with the content. This is handled in [GuidelinesCreatorService](src\Services\Guidelines\GuidelinesCreator.service.ts)
+After generating the embeddings using model `text-embedding-3-small`, it then proceeds to save it in the database with the content. This is handled in [GuidelinesCreatorService](src/Services/Guidelines/GuidelinesCreator.service.ts)
 
 ### /chat
 
@@ -97,13 +97,13 @@ The phone number will be used as a way to identify the user that is doing the re
 > Because of time constraints no authentication method has been implemented
 
 The first thing it does is to transform the user input in embeddings so it can compare it with the guidelines.
-After that it queries the database for the related guidelines and takes the 5 most similar. It does this in [EmbeddingsSearchService](src\Services\Embeddings\EmbeddingsSearch.service.ts)
+After that it queries the database for the related guidelines and takes the 5 most similar. It does this in [EmbeddingsSearchService](src/Services/Embeddings/EmbeddingsSearch.service.ts)
 
 > The query used for the embeddings was found in [this article](https://medium.com/@fenil3357/vector-similarity-search-using-postgres-sequelize-and-express-js-eaedcf340d2a) which also explains really well how does vector similarity search work
 
 With the guidelines already retrieved it then proceeds to build the message history. It does this using the data present in the table `Messages`, which get saved after each message in the conversation.
 
-Then it goes into the [Agent service](src\Services\Agent\Agent.service.ts) and builds the system prompt using the retrieved guidelines.
+Then it goes into the [Agent service](src/Services/Agent/Agent.service.ts) and builds the system prompt using the retrieved guidelines.
 
 > The way it is built we can add to the prompt as many guidelines as we want, but to keep it simple I chose to only take 5
 
