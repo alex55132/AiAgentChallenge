@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: "pgvector/pgvector:pg17"
+    ports:
+      - "8000:5432"
+    environment:
+      POSTGRES_USER: aiagentchallenge
+      POSTGRES_PASSWORD: EXAMPLEPASSWORD
+      POSTGRES_DB: challenge
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+networks:
+  default-network:
+volumes:
+  pgdata:

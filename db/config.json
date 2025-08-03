@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "aiagentchallenge",
+    "password": "EXAMPLEPASSWORD",
+    "database": "challenge",
+    "host": "127.0.0.1",
+    "port": 8000,
+    "dialect": "postgresql"
+  }
+}
